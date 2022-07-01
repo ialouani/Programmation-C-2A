@@ -117,6 +117,168 @@ rappels:
 Les classes:
 C'est le coeur de la programmation objet.
 1)Définition et déclaration:
+une classe consiste en un regroupement de méthpdes et d'attributs.
+Exemple:
+class NomClasse{
+attributes
+...
+méthodes
+...
+};
+=>EXEMPLES:::
+L'ordre des déclarations ne compte pas.
+Le classe:
+#ifndef POINT_H
+#define POINT_H
+class Point
+{
+public:
+void setX(double x);
+void setY(double y);
+double getX();
+double getY();
+double distance(const Point &P);
+Point milieu(const Point &P);
+void saisir();
+void afficher();//interface accessibilité
+private:
+double x,y;//données d'accessiblité d'héritage via des objets (en vue de l'avancée)
+};
+#endif
+La classe est une description des données internes et comportements qu'aura une instance généré par cette classe.
+Les classes: instanciation::
+=>L'instanciation(vue de la généricité) ou (réification), c'est à dire la création d'un objet innstance (ressource) à partir de l'objet classe (description/générateur) peut se faire de façon dynamique. 
+--allocation dynamique:
+A *a=new A();//type *A a pointeur allouée dynamiquement via new A() <=> via new (int* a= new int) A() correspond à une fonction qui retourne un new int qui fait une allocation dynamique en C++. 
+--allocation automatique:
+A a; //en A a type A declaration de variable a. Voila.
+Une classe ; on rappelle ; est une description des données internes et comportements qu'aura une instance générée par cette classe.
+2)Les classes: INSTANCIATION:
+
+
+
+LA RéIFICATION est la création d'un objet instance (ressource) à partir de l'objet classe (descrption/generateur) peut se faire de manière dynamique: 
+tas: A *a=new A();
+pile: A a;
+pile:
+A a
+deja expliquées d'une façcon détaillée.
+=>=>=>Dans les deux cas, une ressource(adresse mémoire) est associée à l'instance. Dans la ressource du tas(les adresses allouées), cette ressource est située dans le tas bien sûr, dans le cas automatique, elle est située (la variable en question) dans la pile.
+3)Visibilité,friend,struct:
+Resumé jusqu'à là:
+Le cours du chapitre 11 : Les classes
+Une évolution des structures
+Une fois introduite la notion de structures, on s'aperçoit qu'il est totalement naturel de créer des fonctions permettant de manipuler ces structures. La notion de classe est donc une notion plus puissante que la notion de structures. Une classe va permettre de regrouper en une seule entité des données membres et des fonctions membres appelées méthodes.
+Cependant, contrairement au langage C, les structures du C++ permettent cela également. La différence entre une structure et une classe est que les attributs et méthodes d'une structure sont par défaut publics, alors qu'ils sont par défaut privés dans une classe(deja immplementation pas d'interface dispo pour une instanciation). Une autre différence est que les structures ne peuvent utiliser l'héritage.(et ça c'est moins..///)
+Notion de classe
+Une classe regroupera donc :
+• des données membres.
+• des méthodes membres qui seront des fonctions.
+Un premier exemple de classe
+• On veut manipuler des points définis par une abscisse et une ordonnée (des réels).
+• Sur un point, on peut calculer la distance entre 2 points et le milieu de 2 points.
+• Nous allons donc définir une classe Point définie par un fichier .h et un fichier .cpp.
+VOIR FICHIER Point.h.
+Explications
+On définit dans ce fichier la classe Point : elle contient 2 données de type double x et y et 2 méthodes membres distance qui calcule la distance entre ce point et un autre Point et milieu qui calcule le milieu du segment composé de
+ce point et d'un autre Point. On remarque l'utilisation des directives de compilation #ifndef, #define et #endif pour gérer les inclusions multiples du fichier header.
+Explications
+Programmation C++ (débutant)/Les classes 2
+Explications
+On définit dans ce fichier la classe Point : elle contient 2 données de type double x et y et 2 méthodes membres
+distance qui calcule la distance entre ce point et un autre Point et milieu qui calcule le milieu du segment composé de
+ce point et d'un autre Point.
+On remarque l'utilisation des directives de compilation #ifndef, #define et #endif pour gérer les inclusions multiple
+du fichier header.
+Le fichier Point.cpp:
+#include "Point.h"
+#include <cmath>
+double Point::distance(const Point &P)
+{
+double dx,dy;
+dx = x - P.x;
+dy = y - P.y;
+return sqrt(dx*dx + dy*dy);
+}
+Point Point::milieu(const Point &P)
+{
+Point M;
+M.x = (P.x+x) /2;
+M.y = (P.y+y) /2;
+return M;
+}
+EXPLICATIONS IMPORTANTES ET FONDAMENTALES:
+Explications
+• Il contient l'implémentation de chaque méthode de la classe Point.
+//des deux fonctions de manipulations rendues publiques avec le mot public: entrée.
+• On fait précéder chaque méthode de Point::
+//synatxe obligeatoire ; rappel: Point Point::milieu(const Point &P){..}
+• On a inclut le fichier cmath afin de pouvoir utiliser la fonction sqrt de cmath (racine carrée).//cmath en C++ et math.h en C.
+=>LE TOUT EN MAIN.cpp:::::
+• A l'intérieur de la classe Point, on peut accéder directement à l'abscisse du point en utilisant la donnée membre x.//c'est ça car rendu publique.
+• On peut accéder à l'abscisse du paramètre P d'une méthode en utilisant P.x.
+//comme la syntaxe de C.Explications
+• Une fois inclus le fichier d'en-tête Point.h, on peut définir 3 points A, B et C.
+• A, B et C sont 3 objets qui sont des instances de la classe Point.
+• Les données membres étant publiques, on peut accéder à l'abscisse et à l'ordonnée de A en dehors de la classe en
+écrivant A.x et A.y.
+• Les méthodes membres distance et milieu étant publiques, on peut écrire directement A.milieu(B) ou
+A.distance(B).
+On revient au cours de allali:
+count<<"L'abcisse vaut<<scin>>A.x
+//retour à la ligne; count << endl
+count <<"Le milieu vaut en terme d'abcisse du point en question" << C.X <<endl
+//de meme pour l'ordoonée*
+count<<endl.
+Voilà.
+On définit un fichier Point.h qui va contenir la définition des classes qu'on va instancier; ici Point. Ca sera Point.h. Puis le fichier Point.cpp est la partie privée qui contenera(plusieurs parties privées possibles) l'implémentation des méthodes fonctions des classes de Point.h, et dernièrement le fichier main.cpp qui va être compilé avec Point.c qui inclut le fichier Point.h évidement qui va faire un main en instanciant trois objets A,B,C en disant en quoi consiste leurs coordonées puis faire A.milieu(B) pour calculer le milieu entre A et B ; c'est simple.//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
