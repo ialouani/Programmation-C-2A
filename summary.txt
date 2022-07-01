@@ -404,6 +404,36 @@ opérations de saisie et d'affichage.
 • cout ne modifie pas notre Point : on passe donc une référence vers un Point constant.
 • Pour cin, il faut passer en paramètre une référence vers un Point.
 On va tout comprendre dans le MAIN4.CPP.
+voir main4.cpp et surtout le fichier POint4.CPP pour comprendre  la logique du systeme.
+=>inititiation au developpement en ce qui concerne la compilation(matiere) et le domaine abstrait de la programmation systeme.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================================================================
+2ieme partie du cours:
+
 
 
 
