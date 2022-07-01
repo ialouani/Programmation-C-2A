@@ -1,0 +1,124 @@
+Inventeur du C++: Bjarne Stroustrup.
+Classes et instanciation d'objets: principe du poo.
+En poo, une p=fonction virtuelle en 198x est une fonction définie dans une classe(méthode)~pointeur de fonction dans une structure C qui est destinée à être  redéfinie dans les classes qui en héritent(plus avancé ce concept).
+Pour surcharger un opérateur, une fonction d’opérateur spéciale est définie dans la classe comme suit:
+class MaClass
+{
+    ..................
+    public
+       returnType operator symbol (arguments)
+       {
+           ..................
+       } 
+    ..................
+};
+=>Ici, returnType est le type de retour de la fonction.
+Le type de retour de la fonction est suivi du mot clé operator.
+symbole est le symbole de l’opérateur que vous souhaitez surcharger. Exemple: +, <, -, ++, etc.
+Vous pouvez transmettre des arguments à la fonction operator de la même manière que des fonctions classiques.
+Ce sont juste des notions à savoir en premier ; pas plus. 
+Normes:
+1998: Normalisation du C++ par l’ISO (International Organization for
+Standardization) et ANSI ISO/CEI 14882:1998
+2003: Dernière version 14882:2003
+2011: Dernière version 14882:2011
+2014: mise à jour mineure ISO/CEI 14882:2014
+2017: ISO/IEC 14882:2017
+2020: en cours
+Le but du C++(les fonctions virutelles pour définir les fonctions qui vont être héritées par les classes;la surcharge des opérateurs par l'ajout de nouvelles fonctionnalitées sous forme public entrée espace returnType operateur sylbol (arguments) ; l'inventeur bien sûr et le but ci-dessus):
+Historique du language C++===(javasript)C+java. (orientée objets).//
+=============================================================================================
+
+L’ajout de fonctionnalités permettant la mise en oeuvre de concepts objets
+dans le language C:
+l’objet: attributs(données internes)(issus des classes(instanciation(javascript exemples))) + méthodes (comportements) ((comment ça marche tout cela)
+encapsulation.(terme vu en prog. fonctionnelle qui permet d'encapsuler une partie privée qui consiste en une implémentation pour en masquer la partie publique qui est accesible à tout le monde ; concept plus avancée en C++ pas simplement un interface piblique et une modularité visant à mettre en oeuvre la modularité et la réutilisabilité du code)
+Typage des objets.(type statique - dynamique, etc..)
+Polymorphisme: un objet peut avoir plus d’un type.(important, le type d'un objet est pluôt générique, le type d'un objet instancié peut varié comme une fonctionnalitée héritée d'un prototype modèle d'objet en javascript)
+redéfinition.(très important, les classes sont mutables différence avec les charactères suivies en javascript dans un simple programme)
+classe: description et génération des objets.=>=>instanciaation et notion d'héritage.
+<=>Il permet aussi la programmation générique: écriture de fonctions (et
+d’objets) indépendantes du type de ces arguments. C’est l’idée du “code à
+trous”.(écriture d'une fonction qui peut prendre un nombre fini de type=>généricité=>conclusion de la 1ere classe de la programmation fonctionnelle illustrée en javascript)
+==============================================================================================
+Est ce que tout programme C compile en C++
+file.c on peut faire g++ file.c ?
+Source C qui ne compile pas (invalidité synatxique) pas en C++.
+Le C autorise la conversion implicite de void* en n'importe quel type de pointeur. 
+exemple:
+int* i=malloc(4);
+
+
+
+
+
+
+**********************************************************************************
+2ieme point: L'historique puis l'Alocation::
+Au cours de l'éxécution, on peut réserver la mémoire soit via une bibliothéque dynamique présente sur la page de ressources, soit via le tas/la pile/le segment de données soit 4.
+1)Allocation automatique (via le tas (géné par le programme tout seul au cours de l'EXECUTION))
+On rappelle les motivations du C++:
+-les fonctions virtuelles (plus que les pointeurs dans des structures)
+-Surchage des opérateurs.(typage variant(générécité(on va voir comment(polymorphisme(classe générique)))))
+Principaes à retenir:
+=>fonctions virtuelles définissant des méthodes de classe.
+=>la surcharge des opérateurs définisssant la généricité des classes via le polymorphisme.
+2)Allocation dynamique:(le TAS)
+En C++, elle se fait à l'aide de l'opérateur new.
+On distingue deux types:
+(à oublier les autres objectifs ; ils sont triviaux)
+l'allocation d'un objet ; l'allocation d'un tableau d'objets.
+new int;//allouer une place mémoire dans le tas référécant un entier.
+new int[10];//allouer une place mémoire dans le tas référencant des sizeof(int) octes dans le tas.
+Conclusion et perte de confusion:
+l'opérateur new retourne l'adresse de début de cette zone.
+et de meme pour le tableau d'objets.
+On a deja demontre que toute variable en poo est considere comme un obejt tel quel.
+Free<=>deleteen C++.
+Les prototypes de libération de l'utilisateur de mémoire:
+delete(new int);
+delete[](new int[10]);
+EXEMPLE COMPLET:
+int* i=new int;//important pour maitriser la syntaxe.
+int *t=new int[10];
+delete i;
+delete[] t;
+2 allocations et bien non!
+4, 2 automatiques pointeur de pointeur et deux dynamiques.
+=>MODELISATION DE L'ETAT DE LA PILE ET DU TAS:
+la pile est croissante vers le haut:
+démarrons depuis le bas:
+121 adresse arbitraire correspondant au stockage d'une donnée (pointeur de pointeur par exemple(int* t=new t[10] ou bien le plus simple va stocker en cette adresse l'adresse i) ; donc de 121 à 120 (normalement sur une machine à 32 bits ; ca se remet sur 4 blocks chacun d'un octet) puis 120 puis une démarche astuciseuse de 116 puis de 112:
+0 non adressé. 
+00
+00
+0A//65
+02//2
+différence 63 61 puis 1 non adressé en écriture ni en lecture. (NULL)
+de meme pour l'autre block de 4.
+Le tas:
+A02 puis A010 les blocks de 8 deux tableaux: décalement d'adresses.
+*********************************************************************************************
+
+Les CLASSES:
+rappel: C++ ::
+fonctions virtuelles et généricité des classes.
+historique: créateur et ce qu'il y a avant.
+reste: les allocations::
+la pile; les tas (rappels (dl))::
+rappels:
+=>int *i=new int;(int *t=new int t[10])
+=>free en C++: delete[] t;//pour faire un free du tableau en question.(delete seulement en cas de faire un free)
+**********************************************************************************************
+
+
+
+
+Les classes:
+C'est le coeur de la programmation objet.
+1)Définition et déclaration:
+
+
+
+
+
