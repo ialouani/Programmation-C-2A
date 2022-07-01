@@ -19,3 +19,4 @@ cout << endl;
 cout << "La distance AB vaut :" << d << endl;
 return 0;
 }
+//on a pas acceder a A.x ou autre chose de la partie privée en fait on fait de l'encapsulation, on a masqué la partie privée à l'utilisateur pour qu'un testeur logiciel ne='utilise que 'this' soit les parties publiques (les membres fonctionnelles ici tjrs la meme chose) pour y manipuler les données :::data.

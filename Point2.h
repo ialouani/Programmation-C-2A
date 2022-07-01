@@ -10,8 +10,8 @@ double getY();
 double distance(const Point &P);
 Point milieu(const Point &P);
 void saisir();
-void afficher();
+  void afficher();//partie publique: l'interface:: plusieurs implémentations possibles.
 private:
-  double x,y;
+  double x,y;//implémentation fixe: partie privée:: réservée à l'implémenteur de 'interface non modifiable du tout.
 };
 #endif

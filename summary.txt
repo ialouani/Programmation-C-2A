@@ -232,11 +232,56 @@ count <<"Le milieu vaut en terme d'abcisse du point en question" << C.X <<endl
 count<<endl.
 Voilà.
 On définit un fichier Point.h qui va contenir la définition des classes qu'on va instancier; ici Point. Ca sera Point.h. Puis le fichier Point.cpp est la partie privée qui contenera(plusieurs parties privées possibles) l'implémentation des méthodes fonctions des classes de Point.h, et dernièrement le fichier main.cpp qui va être compilé avec Point.c qui inclut le fichier Point.h évidement qui va faire un main en instanciant trois objets A,B,C en disant en quoi consiste leurs coordonées puis faire A.milieu(B) pour calculer le milieu entre A et B ; c'est simple.//
-
-
-
-
-
+============================================================
+On contrôle l’accès aux méthodes et attributs pour une sous-classe ou un objet
+exterieur avec public,protected et private:
+la classe sous-classe exterieur
+public oui oui oui
+protected oui oui non
+private oui non non
+Remarque: Les membres protected et private ne peuvent être accédés qu’à
+partir d’une fonction membre de l’instance
+deja expliquée (dechargement du pc//via main2.cpp et le make file target lance ment2).
+Programmation C++ (débutant)/Les classes 4
+3)(je semble que je suis pas trompé de numéro)Interface et boîte noire:
+• Vu de l'extérieur, on ne peut accéder à un objet donné que grâce à ces méthodes publiques.
+• Ceci permet entre autre de protéger l'intégrité des données.
+• L'ensemble des méthodes publiques est appelée l'interface de l'objet.
+• De l'extérieur, l'objet peut être vu comme une boîte noire qui possède une interface d'accès.
+• On cache ainsi à l'utilisateur de cette classe comment cette interface est implémentée : seul le comportement de
+l'interface est important.
+4)Accesseurs et mutateurs
+• On pourra accéder aux valeurs des données membres privées grâce à des méthodes spécifiques appelée accesseurs(this;getX;modifiction via setX;etc..). Les accesseurs seront publics.
+• On pourra même modifier ces valeurs grâce à des fonctions spécifiques appelées mutateurs.
+A se rappeler: les mutateurs sont des fonctions qui peuvent y accéder à la partie privée via des accesseurs et en muter le contenu courant modérament.
+• Cela permet au programmeur d'avoir un contrôle complet sur ces données et sur des contraintes en tout genre qu'il veut imposer à ces données.
+Voilà.
+===============================================================
+5)Explications plus logiques et pertinentes:
+Programmation C++ (débutant)/Les classes 6
+void Point::saisir()
+{
+cout << "Tapez l'abscisse : "; cin >> x;
+cout << "Tapez l'ordonnée : "; cin >> y;
+}
+void Point::afficher()
+{
+cout << "L'abscisse vaut " << x << endl;
+cout << "L'abscisse vaut " << y << endl;
+}
+Explications
+• Dans la méthode setX(...), il y a une utilisation du mot-clé this. Le mot clé this désigne un pointeur vers l'instance courante de la classe elle même(la sous-classe). this->x désigne donc la donnée membre de la classe alors que x désigne le paramètre de la méthode void setX(double x);(c'est logique, l'approfondissement en programmation prototype nous a permis de nous renseigner dune façcon pertinente et compréhensible sur moi-même)
+• Le mutateur double getX(); se contente de renvoyer la valeur de x.
+LE FAIT DE DECLARER LA FONCTION comme etant appartenant a la classe Point et de faire retourner x ; le compilateur sait qu'il doit renvoyer le x de l'objet classe'' en quESTION.
+6)détails disons supplémentaires:
+Explications:
+• On n'a plus le droit d'accéder aux données membres x et y sur les instances de Point A, B et C en utilisant A.x ou B.y : il faut obligatoirement passer là une des méthodes publiques.
+<=>main2.cpp ### main.cpp.
+• Pour saisir la valeur de A, il suffit d'écrire A.saisir();
+• Pour afficher la valeur de A, il suffit d'écrire A.afficher();
+L'encpasulation dans l'approche objet permet de rendre publique que les fonctionnalitées qui permettent via un main tout simple d'accéder aux différents contenus de la sous-classe elle-même ; le fait de ne pas accéder à la donnée membre donnée directement affirme qu'on amsque et on rend privée une partie de 'linterface', c'est le principe d'encapsulation. En approche fonctionnelle, l'encapsulation permet de rendre inacessible certaines fonctionnalitées automatiquement executées au sein d'un module au profit de l'autre modularité qui permet grâce à l'abstraction de multiplier les implémentations de de faire de la modularité tout en respectant les tests et varier les structures et lancer le même objectifs tout en laissant au testeur logiciel le feu vert tout en lançcant ses propres tests d'avant.
+==============================================================================
+====================================================================================
 
 
 
