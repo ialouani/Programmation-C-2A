@@ -1,7 +1,7 @@
 #include "Point.h"
 #include <cmath> //inclusion du module math en C++
 
-double Point::distance(const Point &P)
+double Point::distance(Point &P)
 //implémentation de la membre méthode distance(const Point &P)
 //qui a été rendu publique dans le header coeur de la chose. 
 {
@@ -11,7 +11,7 @@ double Point::distance(const Point &P)
   return sqrt(dx*dx+dy*dy);//on poursuit avec la formule mathématique connue.
 }
 
-Point Point::milieu(const Point &P)//de même pour celle-ci.
+Point Point::milieu(Point &P)//de même pour celle-ci.
 //on définit une classe objet M qui aura comme attribut x
 //P.x+x/2 soit le milieu entre le point &P et M le résultat.
 //avec x <=> this soit l'abcissse de M declarée pour le remplir à l'avance.

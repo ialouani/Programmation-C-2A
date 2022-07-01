@@ -1,4 +1,9 @@
 GCC=g++ -g3 -O0
+mini_project:
+	g++ Point.cpp main.cpp -o one
+	g++ Point2.cpp main2.cpp -o two
+	g++ Point3.cpp main3.cpp -o three
+	g++ Point4.cpp main4.cpp -o four
 all4: lancement4
 all3: lancement3
 all2: lancement2
@@ -24,4 +29,4 @@ lancement4: verify8.o main4.cpp
 clear_all: clean
 	clear && clear && clear
 clean:
-	rm -f Makefile~ *.cpp~ *.h.gch verify *.o *.cpp~ lancement lancement2 *.h~ a.out lancement3 lancement4
+	rm -f Makefile~ *.cpp~ *.h.gch verify *.o *.cpp~ lancement lancement2 *.h~ a.out lancement3 lancement4 one two three four
