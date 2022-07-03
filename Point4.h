@@ -1,5 +1,5 @@
-#ifndef POINT_H
-#define POINT_H
+#ifndef POINT_H4
+#define POINT_H4
 #include<iostream>//a inclure toujours dans un .cpp.
 #include <string>//a inclure
 #include<istream>//a inclure istream

@@ -433,7 +433,24 @@ voir main4.cpp et surtout le fichier POint4.CPP pour comprendre  la logique du s
 
 =============================================================================================
 2ieme partie du cours:
-
+Constructeurs et initialisation des données membres:
+a-Par défaut, les données membres d'un objet ne sont pas initialisées. Il existe toutefois un constructeur par défaut qui se contente de créer ces données membres. Il est appelé dès qu'une instance de la classe est crée. Les données membres sont créées mais ne sont pas initialisées : elles sont à une valeur aléatoire correspondant à ce qu'il y avait en mémoire à ce moment là.
+b-Il est vivement recommandé de définir un constructeur par défaut pour une classe donnée qui initialisera les données membres : ainsi, il n'existera pas d'instance de la classe avec des données membres non initialisées.
+c-On peut également définir d'autres constructeurs qui permettront d'initialiser les données membres d'un objet avec certaines valeurs.
+• Le programmeur sera alors certain que ces données sont dans un état cohérent.
+• Le constructeur peut éventuellement allouer dynamiquement de la mémoire pour une classe complexe : il faut désallouer cette mémoire dès que l'objet n'existe plus.
+CONCEPT IMPORTANT:
+LES DESTRUCTEURS:
+Programmation C++ (débutant)/Les classes 12
+Les destructeurs
+• Le destructeur est appelé automatiquement dès qu'un objet est détruit. Il peut avoir (entre autres) pour rôle de libérer par exemple la mémoire allouée au cours de l'utilisation de la classe.
+=>syntaxe, utilisation, exemples:
+Syntaxe des constructeurs et des destructeurs:
+• Le constructeur par défaut de la classe A sera noté A() . Il ne peut rien renvoyer par un return.
+• On peut créer d'autres constructeur qui seront identifiés par leurs paramètres : par exemple un constructeur de la classe A peut s'écrire A(int x, int y).
+• Le destructeur de la classe A sera noté ~A(). Il ne renvoie rien par un return et ne peut pas avoir de paramètres.
+• Il existe un destructeur par défaut qui se contente de détruire les données membres de l'objet.
+EXEMPLE SIGNIFICATIF, COMPREHENSIF ET APPROFONDIE:
 
 
 

@@ -4,6 +4,8 @@ mini_project:
 	g++ Point2.cpp main2.cpp -o two
 	g++ Point3.cpp main3.cpp -o three
 	g++ Point4.cpp main4.cpp -o four
+	g++ Point5.cpp main5.cpp -o five
+all5: lancement5
 all4: lancement4
 all3: lancement3
 all2: lancement2
@@ -26,7 +28,11 @@ lancement3: verify6.o main3.cpp
 	${GCC} -o $@ $^
 lancement4: verify8.o main4.cpp
 	g++ -o $@ $^
+verify9.o: Point5.cpp
+	g++ -c $< -o verify9.o
+lancement5: verify9.o main5.cpp
+	g++ -o $@ $^
 clear_all: clean
 	clear && clear && clear
 clean:
-	rm -f Makefile~ *.cpp~ *.h.gch verify *.o *.cpp~ lancement lancement2 *.h~ a.out lancement3 lancement4 one two three four
+	rm -f Makefile~ *.cpp~ *.h.gch verify *.o *.cpp~ lancement lancement2 *.h~ a.out lancement3 lancement4 one two three four five
