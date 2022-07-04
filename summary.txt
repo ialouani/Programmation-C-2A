@@ -60,6 +60,23 @@ un make affiche globalement les choses jusqu'à là inifiniment BONNES.
 RESUMONS:
 POUR PASSER A LA SUITE//:::::::::::::::
 =>>>>>>>>>>>>>>>>
+rq: execption<=>erreur en c++ dans l'espace de noms standarts classiques: 
+**stdexecpt**
+**lancer une erruer comme le mot cle throw instanciation de l'objet error via:
+throw runtime_eroor("???")
+valeur coherente
+stockage a l'envers"""".
+ARRET IMMEDIAT DU PROGRAMME DANS LE CAS PRECEDENT.
+revenons a notre eight.cpp et passons par les methodes dune facon asticieuse:
+
+
+
+
+
+
+
+
+
 
 
 
