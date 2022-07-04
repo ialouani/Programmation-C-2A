@@ -8,6 +8,8 @@ class Rational{
   //seul le type de donnée rationnal est capable d'accéder à one,two.
  public:
   //ce sont des methodes; logiquement forcement publiques.
+  Rational();
+  Rational(int a,int b);
   int get__one() const;
   void set__one(int new_value);
   
