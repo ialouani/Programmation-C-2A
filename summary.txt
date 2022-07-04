@@ -29,6 +29,38 @@ ON VEUT afficher les donnees d'une structure C++ contenant 100 données ; le cla
 
 5)Fonctions namespaces:
 depuis le projet courant pourquoi pas.
+(on s'est inspire du fait de la multiplication des memes redefinitions de fonctions=>idee de diminuer le nombre de fichiers a la compilation). *
+Les namespaces sont des parties ou se trouvent des objets imbriquées c'est plus puissant qu'une structure voire même sans détailler ayant la structure d'un module externe/interne++ faisant l'objet de poo dans les chapitres qui suivront maintenant.
+
+6)MISE EN OEUVRE D'UNE CLASSE ET PRINCIPE D'ENCAPSULATION:
+Rq:
+sous-remarque: on a appris la base du hello world ; les fonctions inline ; les namespaces ; les surchargements de fonctions et d'opérateurs ainsi dernièrelent les paramètres de référence. EN gros: un namespace sa syntaxe est à bien connaître, la surcharge fait penser aux fonctions inline mais celles des opérateurs est chouette quand on programmma la fonction qui affiche une structure on utilisse une reprogrammation de l'operateur << precedent cout dans le namescpace std par la fonction suivante(c'etait celle a apprendre dans ke tout):::
+ostream & operator<<(ostrem & os, Point p){
+//printf des composantes;
+.//retour duflux courant: return os pour que ca s'enchaine a a partir de la derniere oarenthese////
+Les titres:
+-projet C++
+-passage de parametres par references
+-surcharge de fonctions et d'operateurs
+-fonctions 'inline'
+-Utilisation de namespaces. 
+# This is a minimal set of ANSI/VT100 color codes
+_END=$'\x1b[0m'
+_BOLD=$'\x1b[1m'
+_UNDER=$'\x1b[4m'
+_REV=$'\x1b[7m'
+avec un: (dans le terminal) : echo "$(tput bold)$(tput smul)$(tput setab 6)Hello World$(tput sgr0)" affiche hello world habituellement en gras format bleu ciel. Voilà. 
+Dans un makefile:
+colors:
+	@$(call cyan,"compilation des le depart le namespace est inclus donc limplementation se fera dans le nom du namespacepointh##")
+	#!/bin/bash
+cyan = /bin/echo -e "\x1b[36m\#\# $1\x1b[0m"
+tout CELA avant le target colors avant le t	arget precedant son execution son resume.
+un make affiche globalement les choses jusqu'à là inifiniment BONNES.
+RESUMONS:
+POUR PASSER A LA SUITE//:::::::::::::::
+=>>>>>>>>>>>>>>>>
+
 
 
 
