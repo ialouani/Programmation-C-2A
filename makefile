@@ -32,7 +32,7 @@ seven: eight_all_end.cpp seven.cpp
 	${GXX} ${VERSION_XX} $(INCLUDE) $^ -o $@
 eight:   colors6 eight_all_end.cpp eight.cpp main2.cpp seven.h
 	${GXX} ${VERISON_XX} ${INCLUDE} -o $@ main2.cpp eight_all_end.cpp 
-set: 
+set: set
 	clear && clear && clear ; rm -rf oneg eight  *.h~ *.h.hgz *.h.gch *.cpp~ Makefile~ summary.txt~ a.out one second three four five five2 six *.sh~ seven ; ./ell.sh && echo -n  -e  "===========================================FIRST ENDEND UP PART"
 
 

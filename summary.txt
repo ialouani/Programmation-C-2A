@@ -68,7 +68,10 @@ valeur coherente
 stockage a l'envers"""".
 ARRET IMMEDIAT DU PROGRAMME DANS LE CAS PRECEDENT.
 revenons a notre eight.cpp et passons par les methodes dune facon asticieuse:
+TOUT A RETRAITER DANS LES COMMENTAIRES FICHIERS 7++++.
 
+7)Redéfinition des opérateurs:(tres tactique(on rappelle que le typage est statique en C++/C:
+=>>>>>
 
 
 
