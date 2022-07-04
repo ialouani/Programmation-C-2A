@@ -1,0 +1,10 @@
+#include<iostream>
+#include<string>
+
+int main(){
+  std::cout<<"Tapez un nombre svp : ";//tant que <<endl on termine pas avec <<
+  int number;
+  std::cin>>number;//l'entrée se collera à number la variable entiere sur la pile.
+  std::cout<<"Nombre saisi : " << nulmber << std::endl;
+  return 0;
+}

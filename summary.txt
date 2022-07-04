@@ -72,6 +72,14 @@ TOUT A RETRAITER DANS LES COMMENTAIRES FICHIERS 7++++.
 
 7)Redéfinition des opérateurs:(tres tactique(on rappelle que le typage est statique en C++/C:
 =>>>>>
+std::cout affichage stantard comme la methode log de la classe UNIVERSELLE console dans jsNODE.
+std::cerr erreurs(afficahages directs)
+std::clog journalisation(en mémoire tampon);existe std::flush notamment pour retour chariot
+\\:affichage de l'anti-slash? 
+declarations de variblaes (tres important dans un  long oint de vue)::::::::::::::
+REMARQUES IMPORTANTES:
+= = = = = == = =
+
 
 
 
