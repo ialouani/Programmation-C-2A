@@ -26,3 +26,9 @@ ON VEUT afficher les donnees d'une structure C++ contenant 100 données ; le cla
 -dans un .h declaration et implementation si inline plusieurs .h dans un seul cpp recevant les.
 -pas gros: degrader la taille de l'executable.
 -de petites calculs et surtout quand on a fait de l'objet. 
+
+5)Fonctions namespaces:
+depuis le projet courant pourquoi pas.
+
+
+
