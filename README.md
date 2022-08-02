@@ -5,4 +5,4 @@ C++(partiel):
 3-maîtrise de la syntaxe.
 4-rendant notre reflexion basée sur une structure d'objets si cela le permet.
 resume: ~1 &(2,3)<=>revient au cours de poo en C++.
-&3->lire un doculent basique avec des exempels eux ausssi basiques.
+&3->lire un document basique avec des exempels eux ausssi basiques.
