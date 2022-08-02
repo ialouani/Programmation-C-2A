@@ -58,16 +58,16 @@ int main(){
   std::cout<<hello<<std::endl;
   /*  some_number2=166;//pour en contourner impossible!!!*/
   std::cout<<some_number2<<std::endl;
-  //conformite: affichage avec ce qui a ete declare statiquelent sur la PILE!!!!!!
+  //conformite: affichage avec ce qui a ete declare statiquement sur la PILE!!!!!!
   //1ere faille: deja traitee.
   int some_code{2000};
   std::cout<<some_code<<std::endl;
   //2ieme faille: a ne pas changer const int / int const.
 
-  //rq: le flux permettant l'affichage(bas niveau) interndit la sortie d'une valeur courante'''''' dans le terminal apres make et execution//..////////////////
+  //rq: le flux permettant l'affichage(bas niveau) interdit la sortie d'une valeur courante'''''' dans le terminal apres make et execution//..////////////////
   auto some_code2{1455};
   std::cout<<some_code2<<std::endl;
-  //3ieme faille: typage statique et synamique grace aumot cle AUTO.(mais pas top)
+  //3ieme faille: typage statique et dynamique grace aumot cle AUTO.(mais pas top)
   //si c'est un flottant (obligé: 1555.0??? àajouter).
   //pas de problemes sur les char* simples?
   auto some_string4{"Hello World"};
