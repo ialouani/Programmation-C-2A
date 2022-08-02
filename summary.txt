@@ -22,7 +22,7 @@ rappel: count <=> extern ostream cout.////
 ON VEUT afficher les donnees d'une structure C++ contenant 100 données ; le classique est de faire une longue ligne ;  mais l'astuce est de surcharger l'opérateur p.(via une fonction 'virtuelle'). on peut declarer le début de cout<<p comme un ostream & os cad. un flux d'affichage en double chainage de reference d'execution continue avec la donnée qu'on va retourner pour remettre les termes a zero. A l'interieur le flux demarre de os ainsi on ecrira: os << p.first << p.second << .. << p.hundrend sans <<endl qui va etre linkée à la chose: <<endl. par retour de os on pointe vers le dernier charactère d'où l'utilité de surcharger les fonctions pour utiliser une variete de fonctions de meme nom sans erreurs pour les classes et la derniere chose surcharge des operateurs pour factoriser un affuchage ; c'est le but des operateurs << de type ostream & qui signifie des flux pas des donnees fixes.
 
 4)Fonctions << inline >>
--eviter les macros paramtrees
+-eviter les macros parametrees
 -dans un .h declaration et implementation si inline plusieurs .h dans un seul cpp recevant les.
 -pas gros: degrader la taille de l'executable.
 -de petites calculs et surtout quand on a fait de l'objet. 
