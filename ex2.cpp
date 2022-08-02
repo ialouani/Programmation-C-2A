@@ -10,7 +10,7 @@ int main(){
   std::cout<<"Tapez votre nom complet : ";
   std::string username;//declaration tjrs obligee!!!
     std::getline(std::cin,username);
-  //difference cette fois depuis les proprietees d'affichage,des strings en SEGMENT DE DONNEESK= ; on appelle la console sur le mode de représentation, puis comme argulent quoi dire scanner k'infi dans usernale NIN DECLAREE soit comme arguments: std::cin,username(le dernier chosi akéatoirement)!!!!!!
+  //difference cette fois depuis les proprietees d'affichage,des strings en SEGMENT DE DONNEES= ; on appelle la console sur le mode de représentation, puis comme argument quoi dire scanner k'infi dans username NIN DECLAREE soit comme arguments: std::cin,username(le dernier chosi aléatoirement)!!!!!!
     // std::cout<<"Nombre saisi : " << number << std::endl;
   std::cout<<"Vous vous appelez comme suit:  "<< username <<std::endl;
   return 0;
